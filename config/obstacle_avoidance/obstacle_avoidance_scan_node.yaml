@@ -1,0 +1,11 @@
+max_obstacle_distance: 0.5
+density_gain: 1
+observation_radius: 1.5
+min_threshold: 0.4
+cumulative_distance: 0.15
+
+obstacle_avoidance:
+  n: 2.0
+  a: 0.2
+  b: 0.2
+  k: 1.0
