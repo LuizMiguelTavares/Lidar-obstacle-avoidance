@@ -7,7 +7,7 @@ Pacote ROS 1 para rodar um experimento de desvio de obstaculos com um robo Pione
 - ROS 1 Noetic no Ubuntu 20.04
 - Python 3 com `numpy`, `scipy`, `matplotlib`, `numba` e `PyQt5`
 - `RosAria` publicando `/RosAria/scan` e `/RosAria/pose`
-- Opcionalmente, VRPN publicando `/vrpn_client_node/P1/pose`
+- Opcionalmente, `natnet_ros` publicando `/natnet_ros/P1/pose`
 
 Este pacote agora define a propria mensagem `ObjectPoints`, entao o pacote antigo `obstacle_avoidance_drone_follower` nao e mais necessario para essa mensagem.
 
@@ -27,7 +27,7 @@ source devel/setup.bash
 
 ## Rodar
 
-Use o launch indoor quando a pose vier do VRPN:
+Use o launch indoor quando a pose vier do `natnet_ros`:
 
 ```bash
 roslaunch lidar_obstacle_avoidance pioneer_indoor.launch
@@ -43,7 +43,7 @@ roslaunch lidar_obstacle_avoidance pioneer_outdor.launch
 
 - Assina `/RosAria/scan` (`sensor_msgs/LaserScan`)
 - Assina `/RosAria/pose` (`nav_msgs/Odometry`) no modo outdoor
-- Assina `/vrpn_client_node/P1/pose` (`geometry_msgs/PoseStamped`) no modo indoor
+- Assina `/natnet_ros/P1/pose` (`geometry_msgs/PoseStamped`) no modo indoor
 - Publica `/RosAria/cmd_vel` (`geometry_msgs/Twist`)
 - Publica `/P1/route`, `/P1/points` e `/P1/potential`
 - Publica `/emergency_flag` a partir do botao de emergencia em PyQt

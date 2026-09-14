@@ -22,7 +22,7 @@ class RobotPoints:
         self.robot_pose = False
         self.namespace = rospy.get_namespace()
 
-        self.pose_subscriber = rospy.Subscriber(f"/vrpn_client_node{self.namespace}pose", 
+        self.pose_subscriber = rospy.Subscriber(f"/natnet_ros{self.namespace}pose",
                                                 PoseStamped, 
                                                 self.pose_callback,
                                                 queue_size=10)

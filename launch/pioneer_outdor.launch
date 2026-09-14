@@ -1,6 +1,5 @@
 <launch>
     <node pkg="lidar_obstacle_avoidance" type="emergency_button.py" name="emergency_button" output="screen" required="true"/>
-    <!-- <include file="$(find vrpn_client_ros)/launch/sample.launch"/> -->
 
     <group ns="P1">
         <node pkg="lidar_obstacle_avoidance" type="differential_robot_route_pose.py" name="pioneer_node" output="screen">

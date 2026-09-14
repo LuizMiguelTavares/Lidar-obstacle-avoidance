@@ -43,7 +43,7 @@ class ObstacleAvoidanceScan:
                                             self.scan_callback, 
                                             queue_size=10)
         
-        self.pose_sub = rospy.Subscriber(f"/vrpn_client_node{self.namespace}pose", 
+        self.pose_sub = rospy.Subscriber(f"/natnet_ros{self.namespace}pose",
                                             PoseStamped, 
                                             self.pose_callback, 
                                             queue_size=10)
