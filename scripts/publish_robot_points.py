@@ -5,7 +5,7 @@ import tf.transformations as tf
 
 from geometry_msgs.msg import Point, PoseStamped
 from std_msgs.msg import String
-from obstacle_avoidance_drone_follower.msg import ObjectPoints
+from pioneer_obs_avoidance.msg import ObjectPoints
 
 import numpy as np
 
