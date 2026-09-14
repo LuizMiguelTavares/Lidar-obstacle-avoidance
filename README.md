@@ -30,13 +30,13 @@ source devel/setup.bash
 Use o launch indoor quando a pose vier do VRPN:
 
 ```bash
-roslaunch pioneer_obs_avoidance pioneer_indoor.launch
+roslaunch lidar_obstacle_avoidance pioneer_indoor.launch
 ```
 
 Use o launch outdoor quando a pose vier da odometria do RosAria:
 
 ```bash
-roslaunch pioneer_obs_avoidance pioneer_outdor.launch
+roslaunch lidar_obstacle_avoidance pioneer_outdor.launch
 ```
 
 ## Topicos Principais

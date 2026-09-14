@@ -5,7 +5,7 @@ import tf.transformations as tf
 
 from geometry_msgs.msg import Point
 from std_msgs.msg import String
-from pioneer_obs_avoidance.msg import ObjectPoints
+from lidar_obstacle_avoidance.msg import ObjectPoints
 from nav_msgs.msg import Odometry
 
 import numpy as np

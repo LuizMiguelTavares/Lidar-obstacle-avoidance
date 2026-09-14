@@ -1,17 +1,17 @@
 <launch>
-    <node pkg="pioneer_obs_avoidance" type="emergency_button.py" name="emergency_button" output="screen" required="true"/>
+    <node pkg="lidar_obstacle_avoidance" type="emergency_button.py" name="emergency_button" output="screen" required="true"/>
     <!-- <include file="$(find vrpn_client_ros)/launch/sample.launch"/> -->
 
     <group ns="P1">
-        <node pkg="pioneer_obs_avoidance" type="differential_robot_route.py" name="pioneer_node" output="screen">
-            <rosparam file="$(find pioneer_obs_avoidance)/config/differential_robots/pioneer.yaml" command="load" />
+        <node pkg="lidar_obstacle_avoidance" type="differential_robot_route.py" name="pioneer_node" output="screen">
+            <rosparam file="$(find lidar_obstacle_avoidance)/config/differential_robots/pioneer.yaml" command="load" />
         </node>
 
-        <node pkg="pioneer_obs_avoidance" type="route_planning.py" name="route_node" output="screen">
-            <rosparam file="$(find pioneer_obs_avoidance)/config/paths/route.yaml" command="load" />
+        <node pkg="lidar_obstacle_avoidance" type="route_planning.py" name="route_node" output="screen">
+            <rosparam file="$(find lidar_obstacle_avoidance)/config/paths/route.yaml" command="load" />
         </node>
 
-        <node pkg="pioneer_obs_avoidance" type="publish_robot_points.py" name="publish_robot_points" output="screen">
+        <node pkg="lidar_obstacle_avoidance" type="publish_robot_points.py" name="publish_robot_points" output="screen">
             <param name="robot_density" value="100"/>
             <param name="robot_height" value="0.5"/>
             <param name="robot_width" value="0.46"/>
@@ -19,13 +19,13 @@
             <param name="y_offset" value="0.0"/>
         </node>
 
-        <node pkg="pioneer_obs_avoidance" type="obstacle_avoidance_scan_node.py" name="obstacle_avoidance_scan" output="screen">
-            <rosparam file="$(find pioneer_obs_avoidance)/config/obstacle_avoidance/obstacle_avoidance_scan_node.yaml" command="load" />
+        <node pkg="lidar_obstacle_avoidance" type="obstacle_avoidance_scan_node.py" name="obstacle_avoidance_scan" output="screen">
+            <rosparam file="$(find lidar_obstacle_avoidance)/config/obstacle_avoidance/obstacle_avoidance_scan_node.yaml" command="load" />
             <param name="scan_topic" value="/RosAria/scan"/>
         </node>
 
-        <node pkg="pioneer_obs_avoidance" type="plot_2D.py" name="plot_2D" output="screen">
-            <rosparam file="$(find pioneer_obs_avoidance)/config/obstacle_avoidance/obstacle_avoidance_scan_node.yaml" command="load" />
+        <node pkg="lidar_obstacle_avoidance" type="plot_2D.py" name="plot_2D" output="screen">
+            <rosparam file="$(find lidar_obstacle_avoidance)/config/obstacle_avoidance/obstacle_avoidance_scan_node.yaml" command="load" />
             <param name="scan_topic" value="/RosAria/scan"/>
         </node>
     </group>

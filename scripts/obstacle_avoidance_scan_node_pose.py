@@ -8,7 +8,7 @@ from sensor_msgs.msg import LaserScan
 from nav_msgs.msg import Odometry
 
 from aurora_py.obstacle_avoidance_2d import ObstacleAvoidance
-from pioneer_obs_avoidance.msg import ObjectPoints
+from lidar_obstacle_avoidance.msg import ObjectPoints
 from scipy.cluster.hierarchy import linkage, fcluster
 from scipy.spatial import KDTree
 import numpy as np
